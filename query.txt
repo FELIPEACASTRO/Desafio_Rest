@@ -1,0 +1,69 @@
+Abaixo, query para inserir dois cenários. (CPF e CONTRATO)  ou (CONTRATO e AGENCIA/CONTA/DAC)
+
+    OBS.: Para os campos que não serão utilizado, inserir valor ZERO.
+
+    
+SELECT [NUM_CPF_CNPJ_EXCE_CONT_ELTO]
+      ,[NUM_OPER_EXCE_CONT_ELTO]
+      ,[DAC10]
+      ,[TPEMPRES]
+      ,[CODBANCO]
+      ,[AGENCIA]
+      ,[CONTA]
+      ,[DAT_INIO_VIGE_EXCE]
+      ,[DAT_FIM_VIGE_EXCE]
+      ,[NUM_FUNL_COLA_COGL]
+      ,[DAT_CADA_EXCE]
+  FROM [DBSJ600].[dbo].[TBSJ6002_EXCE_CONT_ELTO]
+GO
+
+
+--CENÁRIO 01 -  CPF e CONTRATO
+
+INSERT INTO  [DBSJ600].[dbo].[TBSJ6002_EXCE_CONT_ELTO] 
+([NUM_CPF_CNPJ_EXCE_CONT_ELTO]
+      ,[NUM_OPER_EXCE_CONT_ELTO]
+      ,[DAC10]
+      ,[TPEMPRES]
+      ,[CODBANCO]
+      ,[AGENCIA]
+      ,[CONTA]
+      ,[DAT_INIO_VIGE_EXCE]
+      ,[DAT_FIM_VIGE_EXCE]
+      ,[NUM_FUNL_COLA_COGL]
+      ,[DAT_CADA_EXCE])
+VALUES ('11122233312',
+'555444666',
+'0',
+'0',
+'0',
+'0',
+GETDATE(),
+GETDATE()+365,
+'999999999',
+GETDATE())
+
+--CENÁRIO 02 -  AGENCIA/CONTA/DAC e CONTRATO
+
+INSERT INTO  [DBSJ600].[dbo].[TBSJ6002_EXCE_CONT_ELTO] 
+([NUM_CPF_CNPJ_EXCE_CONT_ELTO]
+      ,[NUM_OPER_EXCE_CONT_ELTO]
+      ,[DAC10]
+      ,[TPEMPRES]
+      ,[CODBANCO]
+      ,[AGENCIA]
+      ,[CONTA]
+      ,[DAT_INIO_VIGE_EXCE]
+      ,[DAT_FIM_VIGE_EXCE]
+      ,[NUM_FUNL_COLA_COGL]
+      ,[DAT_CADA_EXCE])
+VALUES ('0',
+'555444666',
+'1',
+'001',
+'341',
+'0032156',
+GETDATE(),
+GETDATE()+365,
+'999999999',
+GETDATE())
