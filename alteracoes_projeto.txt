@@ -1,0 +1,40 @@
+EXT-011198-00101
+
+Executa a primeira query, caso ele retorne dados, nao efetuar os inserts e enviar uma mensagem
+que o registro existe
+
+Caso a query seja executada e não retorne nenhum dado verificar se o campo CPF tem valor , caso tenha
+efetuar o insert de CPF e CONTRATO , caso CPF venha vazio executar o insert AGENCIA/CONTA/DAC e CONTRATO
+
+depois enviar mensagem dizendo que o registro foi inserido com sucesso.
+
+,[TPEMPRES] = 341
+
+inserir
+INSERT INTO  [DBSJ600].[dbo].[TBSJ6002_EXCE_CONT_ELTO] 
+([NUM_CPF_CNPJ_EXCE_CONT_ELTO] id_cliente
+      ,[NUM_OPER_EXCE_CONT_ELTO] id_contrato
+      ,[DAC10] dac_conta
+      ,[TPEMPRES] -00
+      ,[CODBANCO] 341
+      ,[AGENCIA] agencia
+      ,[CONTA] conta
+      ,[DAT_INIO_VIGE_EXCE] getDate()
+      ,[DAT_FIM_VIGE_EXCE]  99/99/9999
+      ,[NUM_FUNL_COLA_COGL] 000000001
+      ,[DAT_CADA_EXCE]) getDate()
+VALUES ('11122233312',
+'555444666',
+'0',
+'0',
+'0',
+'0',
+GETDATE(),
+GETDATE()+365,
+'999999999',
+GETDATE())
+
+
+enviar o delete de excecoes
+
+e a clausula where do
