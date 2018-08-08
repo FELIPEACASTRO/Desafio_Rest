@@ -1,0 +1,19 @@
+API DE RECALCULO E CONSULTA B0
+
+POST/GET
+
+Solicitar acesso a base de dados(sqlserver2016) DBGG00 OU DBGG01 / permissao de acesso a base 
+Sigla do projeto GG - git
+Criar esteira nova  - git
+
+Solicitar acesso a essa nova esteira no git
+
+Analisar a documentação so projeto
+
+Verificar conectividade com a fila MQ RedHat active MQ
+
+java 1.8
+
+Spring boot 2.5.7 , rodar via TOMCAT
+
+Utilizar JPA -(HIBERNATE OU SPRING DATA)
